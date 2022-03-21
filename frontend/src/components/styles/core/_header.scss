@@ -1,0 +1,25 @@
+.head{
+      h1,h3{
+      color: $white !important;
+      margin:0 10px !important;
+    }
+    width: 100%;
+    padding:10px;
+    background-color: $theme-black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10;
+}
+.head-icon{
+display: flex;
+}
+@media screen and (max-width: 600px) {
+  .head-icon{
+  // display: none !important;
+}
+}
