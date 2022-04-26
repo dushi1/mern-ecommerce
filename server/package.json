@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+     "data:import": "node seeder.js",
+    "data:destroy": "node seeder.js -d"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
