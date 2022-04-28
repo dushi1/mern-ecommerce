@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 
 const Card = ({ image, brand, name, id }) => {
   return (
-    <div className="cardcontainer">
-      <Link to={`/product/${id}`} className="textwrap">
-        <img
-          src={image}
-          alt="Italian Trulli"
-          style={{ width: "100%", height: 240 }}
-        />
-        <h2>{brand}</h2>
-        <strong>{name}</strong>
-      </Link>
-    </div>
+    <Link to={`/product/${id}`} className="cardcontainer textwrap">
+      <img
+        className="card-image"
+        src={image}
+        alt="Italian Trulli"
+        // style={{ width: "100%", height: 240 }}
+      />
+      <div className="text-wrapper textwrap">
+        <h2 className="textwrap">{brand}</h2>
+        <strong className="textwrap">{name}</strong>
+      </div>
+    </Link>
   );
 };
 

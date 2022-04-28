@@ -1,25 +1,26 @@
-.head{
-      h1,h3{
-      color: $white !important;
-      margin:0 10px !important;
-    }
-    width: 100%;
-    padding:10px;
-    background-color: $theme-black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 10;
+.head {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  background-color: $theme-black;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  h1,
+  h3 {
+    color: $white !important;
+    margin: 0 10px !important;
+  }
 }
-.head-icon{
-display: flex;
+.head-icon {
+  display: flex;
+  padding-right: 20px;
 }
 @media screen and (max-width: 600px) {
-  .head-icon{
-  // display: none !important;
-}
+  .head-icon {
+    display: none !important;
+  }
 }

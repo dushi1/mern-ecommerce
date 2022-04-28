@@ -3,9 +3,7 @@ import Header from "./components/common/header/index";
 import SideDrawer from "./components/common/sidedrawer/index";
 import Backdrop from "./components/common/backdrop/index";
 import "./components/styles/styles.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/common/footer";
-import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from "./containers/Dashboard";
 import Product from "./containers/Product";
@@ -27,13 +25,7 @@ class App extends Component {
     return (
       <Router>
         <ScrollToTop>
-          <div
-            style={{
-              position: "relative",
-              minHeight: "100vh",
-              paddingBottom: "50px",
-            }}
-          >
+          <div className="app-container">
             <Header
               openH={() => {
                 this.setState({
@@ -41,7 +33,6 @@ class App extends Component {
                 });
               }}
             />
-
             <SideDrawer
               open={this.state.open}
               openD={() => {
@@ -59,15 +50,13 @@ class App extends Component {
                 }}
               />
             ) : null}
-            <main>
-              <Container>
-                <Route path="/register" component={Register} />
-                <Route path="/login" component={Login} />
-                <Route component={Dashboard} path="/" exact />
-                <Route path="/product/:id" component={Product} />
-                <Route path="/cart/:id?" component={Cart} />
-                <Route path="/profile" component={Profile} />
-              </Container>
+            <main className="main-container">
+              <Route path="/register" component={Register} />
+              <Route path="/login" component={Login} />
+              <Route component={Dashboard} path="/" exact />
+              <Route path="/product/:id" component={Product} />
+              <Route path="/cart/:id?" component={Cart} />
+              <Route path="/profile" component={Profile} />
             </main>
             <Footer />
           </div>

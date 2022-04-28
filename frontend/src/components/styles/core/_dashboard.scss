@@ -1,0 +1,33 @@
+.dash-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1400px;
+  padding: 5px;
+}
+
+.dash-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 530px) {
+  .dash-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 959px) {
+  .dash-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}

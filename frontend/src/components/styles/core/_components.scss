@@ -1,16 +1,21 @@
-.button {
+.btn {
   background-color: black;
   color: white;
   margin: 5px;
   padding: 5px 20px;
-  border-color: black;
+  border-color: white;
   border-width: 2px;
   border-style: solid;
+  border-radius: 5px;
   &:hover {
     border-color: red;
     border-width: 2px;
     border-style: solid;
     cursor: default;
+  }
+  &:active {
+    background-color: lightblue;
+    border-color: blue;
   }
 }
 
